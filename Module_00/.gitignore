@@ -1,0 +1,5 @@
+test/result/
+ex00/megaphone
+ex00/*.o
+ex01/phonebook
+ex01/*.o
