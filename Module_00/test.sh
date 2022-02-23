@@ -27,10 +27,11 @@ rm -rf ../test/result/ex00
 mkdir -p ../test/result/ex00
 make > /dev/null
 for fp in `ls ../test/case/ex00`; do
-	while read line
+    while read line
 	do
         eval ${line} >> ../test/result/ex00/$fp
 	done < ../test/case/ex00/$fp
+    ./megaphone >> ../test/result/ex00/$fp
 	diff ../test/result/ex00/$fp ../test/answer/ex00/$fp
-	check_result "tokenize" $fp
+	check_result "ex00" $fp
 done
