@@ -13,6 +13,7 @@ check_result() {
 }
 
 # Test ex00
+echo "~~~~~Test ex00~~~~~"
 cd ex00
 make > /dev/null
 check_result "make"
@@ -35,3 +36,15 @@ for fp in `ls ../test/case/ex00`; do
 	diff ../test/result/ex00/$fp ../test/answer/ex00/$fp
 	check_result "ex00" $fp
 done
+
+# Test ex01
+echo "~~~~~Test ex01~~~~~"
+cd ../ex01
+make > /dev/null
+check_result "make"
+make clean > /dev/null
+check_result "make clean"
+make re > /dev/null
+check_result "make re"
+make fclean > /dev/null
+check_result "make fclean"
