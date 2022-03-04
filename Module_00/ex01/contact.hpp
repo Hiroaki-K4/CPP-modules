@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/03 23:11:32 by hkubo             #+#    #+#             */
-/*   Updated: 2022/03/04 22:44:21 by hkubo            ###   ########.fr       */
+/*   Created: 2022/03/04 22:47:40 by hkubo             #+#    #+#             */
+/*   Updated: 2022/03/04 22:48:07 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-class PhoneBook
+class Contact
 {
     public:
-        PhoneBook();
+        Contact();
         void addContact();
         void searchContact();
 };

@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 22:40:54 by hkubo             #+#    #+#             */
-/*   Updated: 2022/03/04 22:43:31 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/03/04 22:48:17 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "contact.hpp"
 
-PhoneBook::PhoneBook()
+Contact::Contact()
 {
 	std::cout << "PhoneBook construct" << std::endl;
 }
 
-void PhoneBook::addContact()
+void Contact::addContact()
 {
 	std::cout << "Please enter first name, last name, nickname, phone number, darkest secret." << std::endl;
 	std::cout << "Please enter first name." << std::endl;
@@ -38,7 +38,7 @@ void PhoneBook::addContact()
 	std::cout << first_name << " " << last_name << " " << nick_name << " " << phone_number << " " << darkest_secret << std::endl;
 }
 
-void PhoneBook::searchContact()
+void Contact::searchContact()
 {
 	std::cout << "Search now..." << std::endl;
 }
