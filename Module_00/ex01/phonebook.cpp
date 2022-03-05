@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 22:40:54 by hkubo             #+#    #+#             */
-/*   Updated: 2022/03/05 11:07:53 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/03/05 11:47:30 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,53 @@
 
 PhoneBook::PhoneBook()
 {
-	std::cout << "PhoneBook construct" << std::endl;
+	added_nums = 0;
+}
+
+void PhoneBook::replaceOldestContact()
+{
+	size_t i;
+
+	i = 0;
+	while (i < 7)
+	{
+		contact[i].setFirstname(contact[i + 1].getFirstname());
+		contact[i].setLastname(contact[i + 1].getLastname());
+		contact[i].setNickname(contact[i + 1].getNickname());
+		contact[i].setPhoneNumber(contact[i + 1].getPhoneNumber());
+		contact[i].setDarkestSecret(contact[i + 1].getDarkestSecret());
+		i++;
+	}
 }
 
 void PhoneBook::addContact()
 {
 	std::string tmp;
 
+	if (added_nums == 8)
+	{
+		PhoneBook::replaceOldestContact();
+		added_nums--;
+	}
 	std::cout << "Please enter first name, last name, nickname, phone number, darkest secret." << std::endl;
 	std::cout << "Please enter first name." << std::endl;
 	std::cin >> tmp;
-	contact[0].setFirstname(tmp);
+	contact[added_nums].setFirstname(tmp);
 	std::cout << "Please enter last name." << std::endl;
 	std::cin >> tmp;
-	contact[0].setLastname(tmp);
+	contact[added_nums].setLastname(tmp);
 	std::cout << "Please enter nickname." << std::endl;
 	std::cin >> tmp;
-	contact[0].setNickname(tmp);
+	contact[added_nums].setNickname(tmp);
 	std::cout << "Please enter phone number." << std::endl;
 	std::cin >> tmp;
-	contact[0].setPhoneNumber(tmp);
+	contact[added_nums].setPhoneNumber(tmp);
 	std::cout << "Please enter darkest secret." << std::endl;
 	std::cin >> tmp;
-	contact[0].setDarkestSecret(tmp);
-	std::cout << contact[0].getFirstname() << " " << contact[0].getLastname() << " " << contact[0].getNickname() << " " << contact[0].getPhoneNumber() << " " << contact[0].getDarkestSecret() << std::endl;
+	contact[added_nums].setDarkestSecret(tmp);
+	std::cout << contact[added_nums].getFirstname() << " " << contact[added_nums].getLastname() << " " << contact[added_nums].getNickname() << " " << contact[added_nums].getPhoneNumber() << " " << contact[added_nums].getDarkestSecret() << std::endl;
+	std::cout << "Person: " << added_nums << std::endl;
+	added_nums++;
 }
 
 void PhoneBook::searchContact()
