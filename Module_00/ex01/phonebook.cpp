@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 22:40:54 by hkubo             #+#    #+#             */
-/*   Updated: 2022/03/04 22:43:31 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/03/05 11:07:53 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,23 +19,25 @@ PhoneBook::PhoneBook()
 
 void PhoneBook::addContact()
 {
+	std::string tmp;
+
 	std::cout << "Please enter first name, last name, nickname, phone number, darkest secret." << std::endl;
 	std::cout << "Please enter first name." << std::endl;
-	std::string first_name;
-	std::cin >> first_name;
+	std::cin >> tmp;
+	contact[0].setFirstname(tmp);
 	std::cout << "Please enter last name." << std::endl;
-	std::string last_name;
-	std::cin >> last_name;
+	std::cin >> tmp;
+	contact[0].setLastname(tmp);
 	std::cout << "Please enter nickname." << std::endl;
-	std::string nick_name;
-	std::cin >> nick_name;
+	std::cin >> tmp;
+	contact[0].setNickname(tmp);
 	std::cout << "Please enter phone number." << std::endl;
-	std::string phone_number;
-	std::cin >> phone_number;
+	std::cin >> tmp;
+	contact[0].setPhoneNumber(tmp);
 	std::cout << "Please enter darkest secret." << std::endl;
-	std::string darkest_secret;
-	std::cin >> darkest_secret;
-	std::cout << first_name << " " << last_name << " " << nick_name << " " << phone_number << " " << darkest_secret << std::endl;
+	std::cin >> tmp;
+	contact[0].setDarkestSecret(tmp);
+	std::cout << contact[0].getFirstname() << " " << contact[0].getLastname() << " " << contact[0].getNickname() << " " << contact[0].getPhoneNumber() << " " << contact[0].getDarkestSecret() << std::endl;
 }
 
 void PhoneBook::searchContact()
