@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 22:40:54 by hkubo             #+#    #+#             */
-/*   Updated: 2022/03/05 11:47:30 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/03/06 21:44:11 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,50 @@ void PhoneBook::addContact()
 	std::cout << "Please enter darkest secret." << std::endl;
 	std::cin >> tmp;
 	contact[added_nums].setDarkestSecret(tmp);
-	std::cout << contact[added_nums].getFirstname() << " " << contact[added_nums].getLastname() << " " << contact[added_nums].getNickname() << " " << contact[added_nums].getPhoneNumber() << " " << contact[added_nums].getDarkestSecret() << std::endl;
-	std::cout << "Person: " << added_nums << std::endl;
 	added_nums++;
+}
+
+std::string PhoneBook::editOutput(std::string word)
+{
+	if (word.size() > 10)
+		return (word.substr(0, 9).append("."));
+	return (word);
+}
+
+void PhoneBook::showContact(int index)
+{
+	std::cout << "-------------------------------------------" << std::endl;
+	std::cout << "     Index|First Name| Last Name|  Nickname" << std::endl;
+	std::cout << "-------------------------------------------" << std::endl;
+	std::cout << std::setw(10) << std::right << index + 1 << '|';
+	std::cout << std::setw(10) << std::right << editOutput(contact[index].getFirstname()) << '|';
+	std::cout << std::setw(10) << std::right << editOutput(contact[index].getLastname()) << '|';
+	std::cout << std::setw(10) << std::right << editOutput(contact[index].getNickname()) << std::endl;
 }
 
 void PhoneBook::searchContact()
 {
-	std::cout << "Search now..." << std::endl;
+	int index;
+
+	if (added_nums == 0)
+	{
+		std::cout << "No one has been added to the phone book." << std::endl;
+		return ;
+	}
+	std::cout << "Please enter the index." << std::endl;
+	std::cin >> index;
+	index -= 1;
+	std::cin.clear();
+	if (index < 0 || (size_t)index > added_nums)
+	{
+		std::cout << "The index entered has not been added." << std::endl;
+		std::cin.ignore(1024, '\n');
+		return ;
+	}
+	else
+	{
+		std::cout << "index: " <<  index << std::endl;
+		showContact(index);
+		std::cin.ignore(1024, '\n');
+	}
 }
