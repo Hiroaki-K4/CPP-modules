@@ -6,16 +6,11 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 22:40:54 by hkubo             #+#    #+#             */
-/*   Updated: 2022/03/05 11:03:40 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/03/06 23:11:34 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "contact.hpp"
-
-Contact::Contact()
-{
-	std::cout << "PhoneBook construct" << std::endl;
-}
 
 void Contact::setFirstname(std::string str)
 {

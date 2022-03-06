@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 22:40:54 by hkubo             #+#    #+#             */
-/*   Updated: 2022/03/06 21:44:11 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/03/06 23:12:01 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,7 +92,7 @@ void PhoneBook::searchContact()
 	std::cin >> index;
 	index -= 1;
 	std::cin.clear();
-	if (index < 0 || (size_t)index > added_nums)
+	if (index < 0 || (size_t)index >= added_nums)
 	{
 		std::cout << "The index entered has not been added." << std::endl;
 		std::cin.ignore(1024, '\n');
@@ -100,7 +100,6 @@ void PhoneBook::searchContact()
 	}
 	else
 	{
-		std::cout << "index: " <<  index << std::endl;
 		showContact(index);
 		std::cin.ignore(1024, '\n');
 	}

@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 22:47:40 by hkubo             #+#    #+#             */
-/*   Updated: 2022/03/05 11:26:23 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/03/06 23:11:39 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class Contact
         std::string darkest_secret;
 
     public:
-        Contact();
         void setFirstname(std::string str);
         void setLastname(std::string str);
         void setNickname(std::string str);

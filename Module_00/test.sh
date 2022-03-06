@@ -48,3 +48,13 @@ make re > /dev/null
 check_result "make re"
 make fclean > /dev/null
 check_result "make fclean"
+
+rm -rf ../test/result/ex01
+mkdir -p ../test/result/ex01
+make > /dev/null
+for fp in `ls ../test/case/ex01`; do
+	content=`cat ../test/case/ex01/$fp`
+	eval "${content}" >> ../test/result/ex01/$fp
+	diff ../test/result/ex01/$fp ../test/answer/ex01/$fp
+	check_result "ex01" $fp
+done
