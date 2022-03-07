@@ -6,9 +6,12 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 23:11:32 by hkubo             #+#    #+#             */
-/*   Updated: 2022/03/06 21:39:24 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/03/07 21:45:32 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
 
 #include <iostream>
 #include <iomanip>
@@ -28,3 +31,5 @@ class PhoneBook
         std::string editOutput(std::string word);
         void replaceOldestContact();
 };
+
+#endif
