@@ -1,0 +1,109 @@
+My Awesome PhoneBook
+Please enter first name, last name, nickname, phone number, darkest secret.
+Please enter first name.
+Please enter last name.
+Please enter nickname.
+Please enter phone number.
+Please enter darkest secret.
+Please enter first name, last name, nickname, phone number, darkest secret.
+Please enter first name.
+Please enter last name.
+Please enter nickname.
+Please enter phone number.
+Please enter darkest secret.
+Please enter first name, last name, nickname, phone number, darkest secret.
+Please enter first name.
+Please enter last name.
+Please enter nickname.
+Please enter phone number.
+Please enter darkest secret.
+Please enter first name, last name, nickname, phone number, darkest secret.
+Please enter first name.
+Please enter last name.
+Please enter nickname.
+Please enter phone number.
+Please enter darkest secret.
+Please enter first name, last name, nickname, phone number, darkest secret.
+Please enter first name.
+Please enter last name.
+Please enter nickname.
+Please enter phone number.
+Please enter darkest secret.
+Please enter first name, last name, nickname, phone number, darkest secret.
+Please enter first name.
+Please enter last name.
+Please enter nickname.
+Please enter phone number.
+Please enter darkest secret.
+Please enter first name, last name, nickname, phone number, darkest secret.
+Please enter first name.
+Please enter last name.
+Please enter nickname.
+Please enter phone number.
+Please enter darkest secret.
+Please enter first name, last name, nickname, phone number, darkest secret.
+Please enter first name.
+Please enter last name.
+Please enter nickname.
+Please enter phone number.
+Please enter darkest secret.
+Please enter first name, last name, nickname, phone number, darkest secret.
+Please enter first name.
+Please enter last name.
+Please enter nickname.
+Please enter phone number.
+Please enter darkest secret.
+Please enter first name, last name, nickname, phone number, darkest secret.
+Please enter first name.
+Please enter last name.
+Please enter nickname.
+Please enter phone number.
+Please enter darkest secret.
+Please enter the index.
+The index entered has not been added.
+Please enter the index.
+The index entered has not been added.
+Please enter the index.
+The index entered has not been added.
+Please enter the index.
+-------------------------------------------
+     Index|First Name| Last Name|  Nickname
+-------------------------------------------
+         1|000000000.|bbbbbbbbb.|aaaaaaaaa.
+Please enter the index.
+-------------------------------------------
+     Index|First Name| Last Name|  Nickname
+-------------------------------------------
+         2|ccccccccc.|bbbbbbbbb.|aaaaaaaaa.
+Please enter the index.
+-------------------------------------------
+     Index|First Name| Last Name|  Nickname
+-------------------------------------------
+         3|ccccccccc.|bbbbbbbbb.|    aaaaaa
+Please enter the index.
+-------------------------------------------
+     Index|First Name| Last Name|  Nickname
+-------------------------------------------
+         4|000000000.|bbbbbbbbb.|aaaaaaaaaa
+Please enter the index.
+-------------------------------------------
+     Index|First Name| Last Name|  Nickname
+-------------------------------------------
+         5|ccccccccc.|    bbbbbb|aaaaaaaaa.
+Please enter the index.
+-------------------------------------------
+     Index|First Name| Last Name|  Nickname
+-------------------------------------------
+         6|ccccccccc.|       bbb|    aaaaaa
+Please enter the index.
+-------------------------------------------
+     Index|First Name| Last Name|  Nickname
+-------------------------------------------
+         7|000000000.|bbbbbbbbb.|         a
+Please enter the index.
+-------------------------------------------
+     Index|First Name| Last Name|  Nickname
+-------------------------------------------
+         8|       ccc| ccccccccc|        bb
+Please enter the index.
+The index entered has not been added.
