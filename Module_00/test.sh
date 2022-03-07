@@ -58,3 +58,17 @@ for fp in `ls ../test/case/ex01`; do
 	diff ../test/result/ex01/$fp ../test/answer/ex01/$fp
 	check_result "ex01" $fp
 done
+
+# Test ex02
+echo "~~~~~Test ex02~~~~~"
+cd ../ex02
+make > /dev/null
+check_result "make"
+make clean > /dev/null
+check_result "make clean"
+make re > /dev/null
+check_result "make re"
+make fclean > /dev/null
+check_result "make fclean"
+
+make fclean > /dev/null
