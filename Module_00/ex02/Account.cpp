@@ -6,16 +6,24 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 21:56:57 by hkubo             #+#    #+#             */
-/*   Updated: 2022/03/08 21:09:17 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/03/08 21:44:56 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Account.hpp"
 
+int Account::_nbAccounts = 0;
+int Account::_totalAmount = 0;
+int Account::_totalNbDeposits = 0;
+int Account::_totalNbWithdrawals = 0;
+
 Account::Account(int initial_deposit)
 {
-    std::cout << "initial_deposit: " << initial_deposit << std::endl;
+    _accountIndex = _nbAccounts;
+    std::cout << "[19920104_091532] index:" << _accountIndex << ";amount:" << initial_deposit << ";created" << std::endl;
+    _nbAccounts++;
+    std::cout << _nbAccounts << " " << _accountIndex << std::endl;
 }
 
 Account::~Account(void)
