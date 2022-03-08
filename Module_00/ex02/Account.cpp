@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 21:56:57 by hkubo             #+#    #+#             */
-/*   Updated: 2022/03/07 22:22:19 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/03/08 21:09:17 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,43 +23,43 @@ Account::~Account(void)
     std::cout << "~Account" << std::endl;
 }
 
-static int getNbAccounts(void)
+int Account::getNbAccounts(void)
 {
     return (0);
 }
 
-static int getTotalAmount(void)
+int Account::getTotalAmount(void)
 {
     return (0);
 }
 
-static int getNbDeposits(void)
+int Account::getNbDeposits(void)
 {
     return (0);
 }
 
-static int getNbWithdrawals(void)
+int Account::getNbWithdrawals(void)
 {
     return (0);
 }
 
-static void	displayAccountsInfos(void)
+void Account::displayAccountsInfos(void)
 {
     
 }
 
-void makeDeposit(int deposit)
+void Account::makeDeposit(int deposit)
 {
     std::cout << deposit << std::endl;
 }
 
-bool makeWithdrawal(int withdrawal)
+bool Account::makeWithdrawal(int withdrawal)
 {
     std::cout << withdrawal << std::endl;
     return (true);
 }
 
-int checkAmount(void)
+int Account::checkAmount(void) const
 {
     return (1);
 }
