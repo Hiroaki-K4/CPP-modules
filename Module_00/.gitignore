@@ -3,3 +3,5 @@ ex00/megaphone
 ex00/*.o
 ex01/phonebook
 ex01/*.o
+ex02/test
+ex02/*.o

@@ -7,7 +7,6 @@ COLOR_GREEN="\033[32m"
 check_result() {
 	if [ $? -ne 0 ]; then
 		printf "${COLOR_RED}%s:%s %s${COLOR_RESET}\n" "$1" "$2" ' [ERROR]'
-		exit 1
 	fi
 	printf "${COLOR_GREEN}%s:%s %s${COLOR_RESET}\n" "$1" "$2" ' [OK]'
 }
@@ -71,4 +70,9 @@ check_result "make re"
 make fclean > /dev/null
 check_result "make fclean"
 
+make > /dev/null
+./test > ex02.log
+diff 19920104_091532.log ex02.log
+check_result "ex02" "diff test"
+rm ex02.log
 make fclean > /dev/null
