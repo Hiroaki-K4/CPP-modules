@@ -1,4 +1,4 @@
-NAME := test
+NAME := zombie
 
 SRC := $(wildcard *.cpp)
 OBJ := $(SRC:.cpp=.o)

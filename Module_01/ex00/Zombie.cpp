@@ -10,3 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+
+Zombie::Zombie(std::string zombie_name)
+{
+    name = zombie_name;
+}
+
+void Zombie::announce(void)
+{
+    std::cout << name << std::endl;
+}

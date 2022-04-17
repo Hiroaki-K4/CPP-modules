@@ -10,9 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+
 int main(int argc, char *argv[])
 {
     (void)argc;
     (void)argv;
+    Zombie first_zombie("hkubo");
+    first_zombie.announce();
     return (0);
 }

@@ -10,9 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int main(int argc, char *argv[])
+#include "Zombie.hpp"
+
+void randomChump(std::string name)
 {
-    (void)argc;
-    (void)argv;
-    return (0);
-}
+    (void)name;
+    std::cout << "randomChump" << std::endl;
+};
