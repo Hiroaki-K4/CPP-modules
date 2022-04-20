@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 22:27:50 by hkubo             #+#    #+#             */
-/*   Updated: 2022/04/20 22:18:33 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/04/20 22:22:43 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "Zombie.hpp"
 
-#include <iostream>
-#include <stdlib.h>
-
-class Zombie
+int main(int argc, char *argv[])
 {
-    private:
-        std::string name;
+    (void)argc;
+    (void)argv;
 
-    public:
-        Zombie(std::string name);
-        void announce(void);
-        ~Zombie();
-};
+    Zombie *zombie = zombieHorde(42, "Harry");
+    delete[] zombie;
 
-void randomChump(std::string name);
-Zombie *newZombie(std::string name);
-
-#endif
+    return (0);
+}
