@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 22:27:50 by hkubo             #+#    #+#             */
-/*   Updated: 2022/04/19 22:25:40 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/04/20 22:20:12 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ int main(int argc, char *argv[])
 
     std::srand(time(NULL));
     std::string name_list[8] = {"Dobby", "Hagrid", "Hermione", "Malfoy", "Snape", "Ron", "Dumbledore", "Sirius"};
-    for (int i = 0; i < 42; i++) {
+    for (int i = 0; i < 42; i++)
+    {
         int rand_num = std::rand() % 8;
         std::cout << rand_num << std::endl;
         randomChump(name_list[rand_num]);
