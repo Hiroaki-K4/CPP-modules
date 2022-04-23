@@ -1,21 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/23 22:27:50 by hkubo             #+#    #+#             */
-/*   Updated: 2022/04/21 22:27:16 by hkubo            ###   ########.fr       */
+/*   Created: 2022/04/21 22:18:01 by hkubo             #+#    #+#             */
+/*   Updated: 2022/04/23 11:11:15 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanB.hpp"
 
-int main()
+HumanB::HumanB(std::string name)
 {
-    Zombie *zombie = zombieHorde(42, "Harry");
-    delete[] zombie;
+    this->name = name;
+}
 
-    return (0);
+void HumanB::attack()
+{
+    std::cout << name << " attacks with his " << weapon->getType() << std::endl;
+}
+
+void HumanB::setWeapon(Weapon &weapon)
+{
+    this->weapon = &weapon;
 }

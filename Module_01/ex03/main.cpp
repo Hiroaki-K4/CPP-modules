@@ -6,28 +6,32 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 22:27:50 by hkubo             #+#    #+#             */
-/*   Updated: 2022/04/21 22:27:43 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/04/23 11:09:21 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include <iostream>
+#include "HumanA.hpp"
+#include "HumanB.hpp"
+#include "Weapon.hpp"
 
 int main()
 {
-    Zombie first_zombie("Harry");
-    first_zombie.announce();
-
-    Zombie *new_zombie = newZombie("Voldemort");
-    new_zombie->announce();
-    delete new_zombie;
-
-    std::srand(time(NULL));
-    std::string name_list[8] = {"Dobby", "Hagrid", "Hermione", "Malfoy", "Snape", "Ron", "Dumbledore", "Sirius"};
-    for (int i = 0; i < 42; i++)
     {
-        int rand_num = std::rand() % 8;
-        std::cout << rand_num << std::endl;
-        randomChump(name_list[rand_num]);
+        Weapon club = Weapon("crude spiked club");
+        HumanA bob("Bob", club);
+        bob.attack();
+        club.setType("some other type of club");
+        bob.attack();
     }
+    {
+        Weapon club = Weapon("crude spiked club");
+        HumanB jim("Jim");
+        jim.setWeapon(club);
+        jim.attack();
+        club.setType("some other type of club");
+        jim.attack();
+    }
+
     return (0);
 }

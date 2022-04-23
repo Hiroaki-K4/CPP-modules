@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/23 22:27:50 by hkubo             #+#    #+#             */
-/*   Updated: 2022/04/21 22:27:16 by hkubo            ###   ########.fr       */
+/*   Created: 2022/04/21 22:17:12 by hkubo             #+#    #+#             */
+/*   Updated: 2022/04/23 11:11:25 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanA.hpp"
 
-int main()
+HumanA::HumanA(std::string name, Weapon &weapon) : weapon(weapon)
 {
-    Zombie *zombie = zombieHorde(42, "Harry");
-    delete[] zombie;
+    this->name = name;
+}
 
-    return (0);
+void HumanA::attack()
+{
+    std::cout << name << " attacks with his " << weapon.getType() << std::endl;
 }

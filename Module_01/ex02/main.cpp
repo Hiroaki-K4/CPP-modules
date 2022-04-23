@@ -6,17 +6,14 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 22:27:50 by hkubo             #+#    #+#             */
-/*   Updated: 2022/04/20 22:49:47 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/04/21 22:26:45 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 
-int main(int argc, char *argv[])
+int main()
 {
-    (void)argc;
-    (void)argv;
-
     std::string str = "HI THIS IS BRAIN";
     std::string *stringPTR = &str;
     std::string &stringREF = str;

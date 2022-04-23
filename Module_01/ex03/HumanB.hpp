@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/23 22:27:50 by hkubo             #+#    #+#             */
-/*   Updated: 2022/04/21 22:27:16 by hkubo            ###   ########.fr       */
+/*   Created: 2022/04/21 22:18:19 by hkubo             #+#    #+#             */
+/*   Updated: 2022/04/23 11:11:10 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-int main()
+#include "Weapon.hpp"
+
+class HumanB
 {
-    Zombie *zombie = zombieHorde(42, "Harry");
-    delete[] zombie;
+    private:
+        Weapon *weapon;
+        std::string name;
 
-    return (0);
-}
+    public:
+        HumanB(std::string name);
+        void attack();
+        void setWeapon(Weapon &weapon);
+};
+
+#endif
