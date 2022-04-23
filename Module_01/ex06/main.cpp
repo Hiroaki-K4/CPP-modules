@@ -6,19 +6,18 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 22:27:50 by hkubo             #+#    #+#             */
-/*   Updated: 2022/04/23 21:36:03 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/04/23 21:39:55 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-int main()
+int main(int argc, char *argv[])
 {
-    Harl harl;
-    harl.complain("debug");
-    harl.complain("info");
-    harl.complain("warning");
-    harl.complain("error");
-    harl.complain("nothing");
+    if (argc == 2)
+    {
+        Harl harl;
+        harl.complain(argv[1]);
+    }
     return (0);
 }

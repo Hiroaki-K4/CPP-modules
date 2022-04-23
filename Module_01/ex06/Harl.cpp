@@ -6,13 +6,11 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/23 19:52:28 by hkubo             #+#    #+#             */
-/*   Updated: 2022/04/23 21:32:25 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/04/23 21:58:25 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
-
-typedef void (Harl::*HarlMemFn)();
 
 void Harl::debug(void)
 {
@@ -47,13 +45,42 @@ void Harl::error(void)
     std::cout << std::endl;
 }
 
-void Harl::complain(std::string level)
+int Harl::get_level(std::string level)
 {
-    std::string name[] = {"debug", "info", "warning", "error"};
-    HarlMemFn func[] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+    std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
     for (int i = 0; i < 4; i++)
     {
-        if (level == name[i])
-            (this->*func[i])();
+        if (level == levels[i])
+            return (i);
+    }
+    return (-1);
+}
+
+void Harl::complain(std::string level)
+{
+    int lev = get_level(level);
+    switch (lev)
+    {
+        case 0:
+            debug();
+            break;
+        case 1:
+            debug();
+            info();
+            break;
+        case 2:
+            debug();
+            info();
+            warning();
+            break;
+        case 3:
+            debug();
+            info();
+            warning();
+            error();
+            break;
+        default:
+            std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+            break;
     }
 }

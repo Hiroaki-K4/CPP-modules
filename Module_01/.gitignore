@@ -4,6 +4,7 @@ ex02/*.o
 ex03/*.o
 ex04/*.o
 ex05/*.o
+ex06/*.o
 ex00/zombie
 ex01/zombie
 ex02/brain
@@ -11,3 +12,4 @@ ex03/weapon
 ex04/sed
 ex04/*.replace
 ex05/harl
+ex06/harlFilter
