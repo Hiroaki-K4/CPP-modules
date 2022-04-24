@@ -1,4 +1,4 @@
-NAME := harlFilter
+NAME := a.out
 
 SRC := $(wildcard *.cpp)
 OBJ := $(SRC:.cpp=.o)
