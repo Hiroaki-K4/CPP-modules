@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/23 22:27:50 by hkubo             #+#    #+#             */
-/*   Updated: 2022/04/25 22:14:31 by hkubo            ###   ########.fr       */
+/*   Created: 2022/04/25 20:45:17 by hkubo             #+#    #+#             */
+/*   Updated: 2022/04/25 21:52:20 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "ClapTrap.hpp"
 
-#include <iostream>
-#include <stdlib.h>
-
-class Zombie
+int main(void)
 {
-    private:
+    ClapTrap clap("clap");
+    ClapTrap trap("trap");
 
-    public:
-        std::string name;
-        Zombie();
-        Zombie(std::string name);
-        void announce(void);
-        ~Zombie();
-};
+    clap.attack("trap");
+    clap.takeDamage(10);
+    clap.beRepaired(10);
 
-Zombie* zombieHorde(int N, std::string name);
-
-#endif
+    return (0);
+}

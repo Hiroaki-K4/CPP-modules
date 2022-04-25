@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/23 22:27:50 by hkubo             #+#    #+#             */
-/*   Updated: 2022/04/25 22:14:36 by hkubo            ###   ########.fr       */
+/*   Created: 2022/04/25 20:46:45 by hkubo             #+#    #+#             */
+/*   Updated: 2022/04/25 22:13:44 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 #include <iostream>
-#include <stdlib.h>
 
-class Zombie
+class ClapTrap
 {
     private:
         std::string name;
+        unsigned int hit_points;
+        unsigned int energy_points;
+        unsigned int attack_damage;
 
     public:
-        Zombie(std::string name);
-        void announce(void);
-        ~Zombie();
+        ClapTrap();
+        ClapTrap(const std::string &name);
+        ClapTrap(const ClapTrap &obj);
+        ~ClapTrap();
+        ClapTrap &operator=(const ClapTrap &obj);
+        void attack(const std::string& target);
+        void takeDamage(unsigned int amount);
+        void beRepaired(unsigned int amount);
 };
-
-void randomChump(std::string name);
-Zombie *newZombie(std::string name);
 
 #endif
