@@ -6,11 +6,10 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 20:45:17 by hkubo             #+#    #+#             */
-/*   Updated: 2022/04/29 15:28:14 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/04/29 16:03:17 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 
 int main(void)
