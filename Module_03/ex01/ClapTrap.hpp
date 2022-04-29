@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 20:46:45 by hkubo             #+#    #+#             */
-/*   Updated: 2022/04/25 22:13:44 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/04/29 15:04:54 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap
 {
-    private:
+    protected:
         std::string name;
         unsigned int hit_points;
         unsigned int energy_points;

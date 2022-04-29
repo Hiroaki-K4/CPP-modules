@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 20:46:22 by hkubo             #+#    #+#             */
-/*   Updated: 2022/04/25 22:11:10 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/04/29 15:21:47 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &obj)
 
 void ClapTrap::attack(const std::string& target)
 {
-    std::cout << "ClapTrap " << this->name << " attacks " << target << ", causing " << this->attack_damage << " points of damage!" << std::endl;
+    std::cout << this->name << " attacks " << target << ", causing " << this->attack_damage << " points of damage!" << std::endl;
     this->energy_points -= 1;
 }
 
