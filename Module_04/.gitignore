@@ -1,4 +1,6 @@
 ex00/*.o
 ex01/*.o
+ex02/*.o
 ex00/polymorphism
 ex01/brain
+ex02/abstract
