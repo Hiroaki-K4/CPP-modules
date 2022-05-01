@@ -1,51 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/29 16:22:29 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/01 11:51:09 by hkubo            ###   ########.fr       */
+/*   Created: 2022/05/01 12:08:16 by hkubo             #+#    #+#             */
+/*   Updated: 2022/05/01 14:04:30 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-Animal::Animal()
+WrongAnimal::WrongAnimal()
 {
-    this->type = "Animal";
+    this->type = "Wrong animal";
 }
 
-Animal::Animal(const std::string type)
+WrongAnimal::WrongAnimal(const std::string type)
 {
     this->type = type;
 }
 
-Animal::Animal(const Animal &obj)
+WrongAnimal::WrongAnimal(const WrongAnimal &obj)
 {
     std::cout << "[Copy constructor]" << std::endl;
     *this = obj;
 }
 
-Animal::~Animal()
+WrongAnimal::~WrongAnimal()
 {
     std::cout << "[Destructor] " << this->type << " is dead." << std::endl;
 }
 
-Animal &Animal::operator=(const Animal &obj)
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal &obj)
 {
     std::cout << "[Copy assignment operator]" << std::endl;
     this->type = obj.type;
     return (*this);
 }
 
-std::string const &Animal::getType() const
+std::string const &WrongAnimal::getType() const
 {
     return (this->type);
 }
 
-void Animal::makeSound() const
+void WrongAnimal::makeSound() const
 {
-    std::cout << "Animal Animal!" << std::endl;
+    std::cout << "Wrong animal!" << std::endl;
 }
