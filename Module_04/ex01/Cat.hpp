@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 11:53:40 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/01 14:53:51 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/01 21:20:21 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Cat : public Animal
         ~Cat();
         Cat &operator=(const Cat &obj);
         void makeSound() const;
-        Brain get_brain();
+        Brain *getBrain();
 };
 
 #endif

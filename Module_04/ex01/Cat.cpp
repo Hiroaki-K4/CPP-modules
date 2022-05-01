@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 11:53:30 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/01 14:53:35 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/01 21:20:18 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void Cat::makeSound() const
     std::cout << "Nya-Nya-!" << std::endl;
 }
 
-Brain Cat::get_brain()
+Brain *Cat::getBrain()
 {
     return (this->brain);
 }

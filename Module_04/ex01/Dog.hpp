@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 16:54:55 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/01 14:53:03 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/01 21:21:40 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Dog : public Animal
         ~Dog();
         Dog &operator=(const Dog &obj);
         void makeSound() const;
-        std::string get_brain();
+        Brain *getBrain() const;
 };
 
 #endif

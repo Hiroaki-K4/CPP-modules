@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 14:19:21 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/01 14:48:06 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/01 21:59:54 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,11 @@
 
 Brain::Brain()
 {
-    ideas[0] = "ideas";
+    const std::string ideas[] = {"joy", "sadness", "anger", "surprise", "fear", "disgust"};
+    for (int i = 0; i < 100; i++)
+    {
+        this->ideas[i] = ideas[i % 6];
+    }
 }
 
 Brain::Brain(const Brain &obj)
@@ -36,4 +40,14 @@ Brain &Brain::operator=(const Brain &obj)
         this->ideas[i] = obj.ideas[i];
     }
     return (*this);
+}
+
+std::string Brain::getIdea(const int index)
+{
+    return (this->ideas[index]);
+}
+
+void Brain::setIdea(const int index, std::string idea)
+{
+    this->ideas[index] = idea;
 }

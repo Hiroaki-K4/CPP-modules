@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 16:55:36 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/01 14:52:56 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/01 21:21:57 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void Dog::makeSound() const
     std::cout << "Wan Wan!" << std::endl;
 }
 
-std::string Dog::get_brain()
+Brain *Dog::getBrain() const
 {
     return (this->brain);
 }
