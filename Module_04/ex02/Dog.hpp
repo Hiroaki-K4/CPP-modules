@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/01 11:53:30 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/03 12:09:54 by hkubo            ###   ########.fr       */
+/*   Created: 2022/04/29 16:54:55 by hkubo             #+#    #+#             */
+/*   Updated: 2022/05/01 21:21:40 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#ifndef DOG_HPP
+# define DOG_HPP
 
-Cat::Cat(): Animal("Cat")
-{
-}
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-Cat::Cat(const Cat &obj): Animal(obj)
+class Dog : public Animal
 {
-}
+    private:
+        Brain *brain;
+    public:
+        Dog();
+        Dog(const Dog &obj);
+        ~Dog();
+        Dog &operator=(const Dog &obj);
+        void makeSound() const;
+        Brain *getBrain() const;
+};
 
-Cat::~Cat()
-{
-    std::cout << "[Cat destructor] " << this->type << " is dead." << std::endl;
-}
-
-Cat &Cat::operator=(const Cat &obj)
-{
-    this->Animal::operator=(obj);
-    return (*this);
-}
-
-void Cat::makeSound() const
-{
-    std::cout << "Nya-Nya-!" << std::endl;
-}
+#endif

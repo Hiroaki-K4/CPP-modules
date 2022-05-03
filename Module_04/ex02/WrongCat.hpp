@@ -1,37 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/01 11:53:30 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/03 12:09:54 by hkubo            ###   ########.fr       */
+/*   Created: 2022/05/01 12:06:12 by hkubo             #+#    #+#             */
+/*   Updated: 2022/05/01 14:03:37 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-Cat::Cat(): Animal("Cat")
-{
-}
+#include "WrongAnimal.hpp"
 
-Cat::Cat(const Cat &obj): Animal(obj)
+class WrongCat : public WrongAnimal
 {
-}
+    public:
+        WrongCat();
+        WrongCat(const WrongCat &obj);
+        ~WrongCat();
+        WrongCat &operator=(const WrongCat &obj);
+        void makeSound() const;
+};
 
-Cat::~Cat()
-{
-    std::cout << "[Cat destructor] " << this->type << " is dead." << std::endl;
-}
-
-Cat &Cat::operator=(const Cat &obj)
-{
-    this->Animal::operator=(obj);
-    return (*this);
-}
-
-void Cat::makeSound() const
-{
-    std::cout << "Nya-Nya-!" << std::endl;
-}
+#endif

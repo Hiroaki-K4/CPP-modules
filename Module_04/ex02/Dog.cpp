@@ -1,37 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/01 11:53:30 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/03 12:09:54 by hkubo            ###   ########.fr       */
+/*   Created: 2022/04/29 16:55:36 by hkubo             #+#    #+#             */
+/*   Updated: 2022/05/03 12:09:34 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "Dog.hpp"
 
-Cat::Cat(): Animal("Cat")
+Dog::Dog(): Animal("Dog")
 {
+    brain = new Brain();
 }
 
-Cat::Cat(const Cat &obj): Animal(obj)
+Dog::Dog(const Dog &obj): Animal(obj)
 {
+    brain = new Brain();
 }
 
-Cat::~Cat()
+Dog::~Dog()
 {
-    std::cout << "[Cat destructor] " << this->type << " is dead." << std::endl;
+    delete brain;
+    std::cout << "[Dog destructor] " << this->type << " is dead." << std::endl;
 }
 
-Cat &Cat::operator=(const Cat &obj)
+Dog &Dog::operator=(const Dog &obj)
 {
     this->Animal::operator=(obj);
     return (*this);
 }
 
-void Cat::makeSound() const
+void Dog::makeSound() const
 {
-    std::cout << "Nya-Nya-!" << std::endl;
+    std::cout << "Wan Wan!" << std::endl;
+}
+
+Brain *Dog::getBrain() const
+{
+    return (this->brain);
 }

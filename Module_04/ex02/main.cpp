@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/01 11:53:30 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/03 12:09:54 by hkubo            ###   ########.fr       */
+/*   Created: 2022/04/29 16:21:16 by hkubo             #+#    #+#             */
+/*   Updated: 2022/05/03 12:08:46 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Animal.hpp"
+#include "Dog.hpp"
 #include "Cat.hpp"
 
-Cat::Cat(): Animal("Cat")
+int main(void)
 {
-}
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
+    std::cout << j->getType() << " " << std::endl;
+    std::cout << i->getType() << " " << std::endl;
+    i->makeSound();
+    j->makeSound();
 
-Cat::Cat(const Cat &obj): Animal(obj)
-{
-}
+    delete j;
+    delete i;
 
-Cat::~Cat()
-{
-    std::cout << "[Cat destructor] " << this->type << " is dead." << std::endl;
-}
-
-Cat &Cat::operator=(const Cat &obj)
-{
-    this->Animal::operator=(obj);
-    return (*this);
-}
-
-void Cat::makeSound() const
-{
-    std::cout << "Nya-Nya-!" << std::endl;
+    return (0);
 }
