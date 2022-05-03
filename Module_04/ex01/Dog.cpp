@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/29 16:55:36 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/01 21:21:57 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/03 12:09:46 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Dog::Dog(const Dog &obj): Animal(obj)
 Dog::~Dog()
 {
     delete brain;
-    std::cout << "[ Dog destructor] " << this->type << " is dead." << std::endl;
+    std::cout << "[Dog destructor] " << this->type << " is dead." << std::endl;
 }
 
 Dog &Dog::operator=(const Dog &obj)

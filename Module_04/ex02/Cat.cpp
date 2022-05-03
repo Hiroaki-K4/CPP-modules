@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/01 11:53:30 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/01 21:20:18 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/03 12:09:19 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Cat::Cat(const Cat &obj): Animal(obj)
 Cat::~Cat()
 {
     delete this->brain;
-    std::cout << "[ Cat destructor] " << this->type << " is dead." << std::endl;
+    std::cout << "[Cat destructor] " << this->type << " is dead." << std::endl;
 }
 
 Cat &Cat::operator=(const Cat &obj)
