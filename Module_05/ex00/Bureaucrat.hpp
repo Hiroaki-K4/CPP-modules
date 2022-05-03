@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 14:06:02 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/03 14:40:34 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/03 22:24:23 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,18 @@ class Bureaucrat
         int getGrade() const;
         void increaseGrade();
         void decreaseGrade();
-        void GradeTooHighException();
-        void GradeTooLowException();
+        class GradeTooHighException : public std::exception
+        {
+            public:
+                const char *what() const throw();
+        };
+        class GradeTooLowException : public std::exception
+        {
+            public:
+                const char *what() const throw();
+        };
 };
+
+std::ostream &operator<<(std::ostream& os, const Bureaucrat &obj);
 
 #endif
