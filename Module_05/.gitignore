@@ -1,2 +1,4 @@
 ex00/*.o
+ex01/*.o
 ex00/bureaucrat
+ex01/form
