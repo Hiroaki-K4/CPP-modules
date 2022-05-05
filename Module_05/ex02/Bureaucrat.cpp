@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 14:05:43 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/05 16:52:49 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/05 18:17:10 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,11 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
     return ("Grade is too low!");
 }
 
+const char* Bureaucrat::NotSignedException::what() const throw()
+{
+    return ("this form has not been signed yet!");
+}
+
 void Bureaucrat::signForm(Form &form)
 {
     try
@@ -94,4 +99,25 @@ std::ostream &operator<<(std::ostream& os, const Bureaucrat &obj)
 {
     os << obj.getName() << ", bureaucrat grade " << obj.getGrade() << ".";
     return (os);
+}
+
+void Bureaucrat::executeForm(Form const &form)
+{
+    try
+    {
+        if (form.getIsSigned())
+        {
+            form.beExecuted(this->getGrade());
+            form.execute(*this);
+            std::cout << this->getName() << " executed " << form.getName() << std::endl;
+        }
+        else
+        {
+            throw Bureaucrat::NotSignedException();
+        }
+    }
+    catch (std::exception &e)
+    {
+        std::cout << this->getName() <<  " couldn't execute " << form.getName() << " because " << e.what() << "." << std::endl;
+    }
 }
