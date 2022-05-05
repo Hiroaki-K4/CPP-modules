@@ -6,16 +6,24 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 22:37:24 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/04 22:38:51 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/05 15:46:24 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PRESIDENTIALPARDONFORM_HPP
 # define PRESIDENTIALPARDONFORM_HPP
 
-class PresidentialPardonForm
+#include "Form.hpp"
+
+class PresidentialPardonForm : public Form
 {
-    
+    public:
+        PresidentialPardonForm();
+        PresidentialPardonForm(const std::string name);
+        PresidentialPardonForm(const PresidentialPardonForm &obj);
+        ~PresidentialPardonForm();
+        PresidentialPardonForm &operator=(const PresidentialPardonForm &obj);
+        void execute(Bureaucrat const &executor) const;
 };
 
 #endif

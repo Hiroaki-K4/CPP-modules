@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 14:05:43 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/04 11:10:46 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/05 16:52:49 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
     return ("Grade is too low!");
 }
 
-void Bureaucrat::signForm(Form form)
+void Bureaucrat::signForm(Form &form)
 {
     try
     {

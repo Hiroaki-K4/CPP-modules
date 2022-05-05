@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 14:05:02 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/04 11:13:13 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/05 16:22:48 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int main(void)
         Form form1("form1", 100, 100);
         std::cout << form1 << std::endl;
         person1.signForm(form1);
+        std::cout << form1 << std::endl;
     }
     catch (std::exception &e)
     {
@@ -37,6 +38,7 @@ int main(void)
         Form form2("form2", 100, 100);
         std::cout << form2 << std::endl;
         person2.signForm(form2);
+        std::cout << form2 << std::endl;
     }
     catch (std::exception &e)
     {

@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 09:59:17 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/04 11:11:10 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/05 16:20:53 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,12 +61,12 @@ void Form::beSigned(const int grade)
 
 const char* Form::GradeTooHighException::what() const throw()
 {
-    return ("[Permission denied]Grade is too high");
+    return ("grade is too high");
 }
 
 const char* Form::GradeTooLowException::what() const throw()
 {
-    return ("[Permission denied] Grade is too low");
+    return ("grade is too low");
 }
 
 std::ostream &operator<<(std::ostream& os, const Form &obj)

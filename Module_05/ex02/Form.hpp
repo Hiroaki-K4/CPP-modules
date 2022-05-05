@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 09:59:47 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/04 10:58:44 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/05 18:17:28 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,11 @@
 
 #include <iostream>
 
+class Bureaucrat;
+
 class Form
 {
-    private:
+    protected:
         const std::string name;
         bool is_signed;
         const int sign_grade;
@@ -32,6 +34,7 @@ class Form
         int getSignGrade() const;
         int getExecGrade() const;
         void beSigned(const int grade);
+        void beExecuted(const int grade) const;
         class GradeTooHighException : public std::exception
         {
             public:
@@ -42,6 +45,7 @@ class Form
             public:
                 const char *what() const throw();
         };
+        virtual void execute(Bureaucrat const &executor) const;
 };
 
 std::ostream &operator<<(std::ostream& os, const Form &obj);

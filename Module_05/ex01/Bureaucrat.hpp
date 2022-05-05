@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 14:06:02 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/04 11:10:07 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/05 16:53:21 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ class Bureaucrat
             public:
                 const char *what() const throw();
         };
-        void signForm(Form form);
+        void signForm(Form &form);
 };
 
 std::ostream &operator<<(std::ostream& os, const Bureaucrat &obj);
