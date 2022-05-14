@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 09:59:47 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/07 12:38:06 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/14 19:09:19 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Form
     public:
         Form(const std::string &name, const int sign_grade, const int exec_grade);
         Form(const Form &obj);
-        ~Form();
+        virtual ~Form();
         Form &operator=(const Form &obj);
         std::string getName() const;
         bool getIsSigned() const;

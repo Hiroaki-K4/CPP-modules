@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 22:31:50 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/14 18:37:36 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/14 18:58:32 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,37 @@ Intern &Intern::operator=(const Intern &obj)
     return (*this);
 }
 
+Form *Intern::ShrubberyCreation(const std::string target)
+{
+    Form *form = new ShrubberyCreationForm(target);
+    return (form);
+}
+
+Form *Intern::RobotomyRequest(const std::string target)
+{
+    Form *form = new RobotomyRequestForm(target);
+    return (form);
+}
+
+Form *Intern::PresidentialPardon(const std::string target)
+{
+    Form *form = new PresidentialPardonForm(target);
+    return (form);
+}
+
 Form *Intern::makeForm(std::string form_name, std::string target_form)
 {
     const std::string forms[3] = {"shrubbery creation", "robotomy request", "presidential pardon"};
-    // Form *(*form_func[3])(const std::string target) = {&ShrubberyCreationForm::createForm, &RobotomyRequestForm::createForm, &PresidentialPardonForm::createForm};
+    Form *(Intern::*form_func[3])(const std::string target) = {&Intern::ShrubberyCreation, &Intern::RobotomyRequest, &Intern::PresidentialPardon};
 
     for (int i = 0; i < 3; i++)
     {
         if (forms[i] == form_name)
         {
-            std::cout << form_name << std::endl;
+            std::cout << "Intern creates " << form_name << std::endl;
+            return ((this->*form_func[i])(target_form));
         }
     }
-    std::cout << form_name << " " << target_form << std::endl;
+    std::cout << "There is no matching form." << std::endl;
     return (NULL);
 }
