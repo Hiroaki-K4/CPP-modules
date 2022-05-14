@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 14:05:02 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/14 19:09:48 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/14 22:02:32 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ int main(void)
         Intern intern1;
         Form* rrf;
         rrf = intern1.makeForm("shrubbery creation", "target1");
-        if (rrf != NULL)
-            std::cout << *rrf << std::endl;
+        std::cout << *rrf << std::endl;
         delete rrf;
     }
     catch (std::exception &e)
@@ -42,8 +41,7 @@ int main(void)
         Intern intern2;
         Form* rrf;
         rrf = intern2.makeForm("robotomy request", "target2");
-        if (rrf != NULL)
-            std::cout << *rrf << std::endl;
+        std::cout << *rrf << std::endl;
         delete rrf;
     }
     catch (std::exception &e)
@@ -58,8 +56,7 @@ int main(void)
         Intern intern3;
         Form* rrf;
         rrf = intern3.makeForm("presidential pardon", "target3");
-        if (rrf != NULL)
-            std::cout << *rrf << std::endl;
+        std::cout << *rrf << std::endl;
         delete rrf;
     }
     catch (std::exception &e)
@@ -74,8 +71,7 @@ int main(void)
         Intern intern4;
         Form* rrf;
         rrf = intern4.makeForm("No match", "target4");
-        if (rrf != NULL)
-            std::cout << *rrf << std::endl;
+        std::cout << *rrf << std::endl;
         delete rrf;
     }
     catch (std::exception &e)

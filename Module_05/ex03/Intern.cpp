@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 22:31:50 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/14 18:58:32 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/14 22:01:52 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,10 @@ Form *Intern::makeForm(std::string form_name, std::string target_form)
             return ((this->*form_func[i])(target_form));
         }
     }
-    std::cout << "There is no matching form." << std::endl;
-    return (NULL);
+    throw NoSuchParameterException();
+}
+
+const char* Intern::NoSuchParameterException::what() const throw()
+{
+    return ("No such parameter!");
 }
