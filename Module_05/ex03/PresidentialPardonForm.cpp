@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 22:37:06 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/05 15:46:32 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/07 12:04:33 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,9 @@ void PresidentialPardonForm::execute(Bureaucrat const &executor) const
 {
     (void)executor;
     std::cout << this->getName() << " has been pardoned by Zaphod Beeblebrox." << std::endl;
+}
+
+Form *PresidentialPardonForm::createForm(const std::string target)
+{
+    return (new PresidentialPardonForm(target));
 }

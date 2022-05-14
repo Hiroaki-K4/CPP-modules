@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 09:59:47 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/05 18:17:28 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/07 12:38:06 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Form
         const int sign_grade;
         const int exec_grade;
     public:
-        Form(const std::string name, const int sign_grade, const int exec_grade);
+        Form(const std::string &name, const int sign_grade, const int exec_grade);
         Form(const Form &obj);
         ~Form();
         Form &operator=(const Form &obj);

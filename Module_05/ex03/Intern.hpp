@@ -6,19 +6,26 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 22:32:14 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/05 22:33:00 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/07 11:15:13 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef INTERN_HPP
 # define INTERN_HPP
 
+#include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
+
 class Intern
 {
-    private:
-    
     public:
-
+        Intern();
+        Intern(const Intern &obj);
+        ~Intern();
+        Intern &operator=(const Intern &obj);
+        Form *makeForm(std::string form_name, std::string target_form);
 };
 
 #endif

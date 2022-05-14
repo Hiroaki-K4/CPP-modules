@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 22:37:24 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/05 15:46:24 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/07 12:04:30 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class PresidentialPardonForm : public Form
         ~PresidentialPardonForm();
         PresidentialPardonForm &operator=(const PresidentialPardonForm &obj);
         void execute(Bureaucrat const &executor) const;
+        Form *createForm(const std::string target);
 };
 
 #endif

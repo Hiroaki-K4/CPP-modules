@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 22:36:06 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/05 18:09:37 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/07 12:04:23 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class RobotomyRequestForm : public Form
         ~RobotomyRequestForm();
         RobotomyRequestForm &operator=(const RobotomyRequestForm &obj);
         void execute(Bureaucrat const &executor) const;
+        Form *createForm(const std::string target);
 };
 
 #endif

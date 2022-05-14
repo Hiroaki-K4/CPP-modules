@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 22:34:22 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/05 17:42:04 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/07 12:37:02 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ ShrubberyCreationForm::ShrubberyCreationForm() : Form("", 145, 137)
 {
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(const std::string name) : Form(name, 145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm(const std::string &name) : Form(name, 145, 137)
 {
 }
 
@@ -41,4 +41,9 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
     std::ofstream File(file_name.c_str());
     File << ASCII_TREES;
     File.close();
+}
+
+Form *ShrubberyCreationForm::createForm(const std::string &target)
+{
+    return (new ShrubberyCreationForm(target));
 }
