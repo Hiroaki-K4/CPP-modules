@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Convert.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/14 22:24:52 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/15 17:28:21 by hkubo            ###   ########.fr       */
+/*   Created: 2022/05/15 16:09:15 by hkubo             #+#    #+#             */
+/*   Updated: 2022/05/15 17:52:41 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef CONVERT_HPP
+# define CONVERT_HPP
+
 #include <iostream>
+#include <sstream>
 #include <string>
-#include "Convert.hpp"
+#include <cmath>
 
-int main(int argc, char *argv[])
+class Convert
 {
-    if (argc == 2)
-    {
-        std::cout << "Hello " << argv[1] << std::endl;
-        Convert input(argv[1]);
-    }
-    else
-    {
-        std::cout << "One argument is required." << std::endl;
-    }
+    private:
+        char type;
+    public:
+        Convert();
+        Convert(const char *input);
+        Convert(const Convert &obj);
+        Convert &operator=(const Convert &obj);
+        ~Convert();
+        char getType();
+        char decideInputType(const char *input);
+};
 
-    return (0);
-}
+#endif
