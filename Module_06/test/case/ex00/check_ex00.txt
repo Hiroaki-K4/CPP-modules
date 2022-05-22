@@ -1,0 +1,3 @@
+./convert 0
+./convert nan
+./convert 42.0f

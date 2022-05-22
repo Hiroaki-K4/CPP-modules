@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/14 22:24:52 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/22 17:54:31 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/22 22:47:15 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,10 @@ int main(int argc, char *argv[])
         {
             test.display(atof(argv[1]));
         }
-        std::cout << type << std::endl;
+        else if (type == "not-displayable")
+        {
+            std::cout << "Input is not displayable" << std::endl;
+        }
     }
     else
     {
