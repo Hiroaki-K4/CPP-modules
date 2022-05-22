@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/15 16:09:15 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/15 22:19:10 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/22 17:55:29 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,20 @@
 #include <sstream>
 #include <string>
 #include <cmath>
+#include <iomanip>
 
 class Convert
 {
-    private:
-        char type;
     public:
         Convert();
-        Convert(const char *input);
         Convert(const Convert &obj);
         Convert &operator=(const Convert &obj);
         ~Convert();
-        char getType();
-        char decideInputType(const char *input);
+        std::string decideInputType(const std::string input);
+        void display(char c);
+        void display(int i);
+        void display(float f);
+        void display(double d);
 };
 
 #endif

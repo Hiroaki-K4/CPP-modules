@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/14 22:24:52 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/15 17:28:21 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/22 17:54:31 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,26 @@ int main(int argc, char *argv[])
 {
     if (argc == 2)
     {
-        std::cout << "Hello " << argv[1] << std::endl;
-        Convert input(argv[1]);
+        std::string input = static_cast<std::string>(argv[1]);
+        Convert test;
+        std::string type = test.decideInputType(input);
+        if (type == "char")
+        {
+            test.display(argv[1][0]);
+        }
+        else if (type == "int")
+        {
+            test.display(atoi(argv[1]));
+        }
+        else if (type == "float")
+        {
+            test.display(static_cast<float>(atof(argv[1])));
+        }
+        else if (type == "double")
+        {
+            test.display(atof(argv[1]));
+        }
+        std::cout << type << std::endl;
     }
     else
     {
