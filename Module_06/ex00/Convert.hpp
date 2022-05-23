@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/15 16:09:15 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/22 22:33:20 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/23 22:13:21 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 #include <cmath>
 #include <iomanip>
 #include <climits>
+#include <math.h>
 
 class Convert
 {

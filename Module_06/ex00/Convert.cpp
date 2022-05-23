@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/15 16:08:30 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/22 22:58:09 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/23 22:14:31 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,8 +84,10 @@ void Convert::display(float f)
         std::cout << "char: Non displayable" << std::endl;
     else
         std::cout << "char: '" << static_cast<char>(f) << "'" << std::endl;
-    // TODO: Add +inff and -inff process
-    std::cout << "int: " << static_cast<int>(f) << std::endl;
+    if (isinf(f) || f != f)
+        std::cout << "int: impossible" << std::endl;
+    else
+        std::cout << "int: " << static_cast<int>(f) << std::endl;
     std::cout << "float: " << std::fixed << std::setprecision(1) << f << "f" << std::endl;
     std::cout << "double: " << std::fixed << std::setprecision(1) << static_cast<double>(f) << std::endl;
 }
