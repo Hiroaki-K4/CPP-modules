@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 22:20:38 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/25 23:30:44 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/26 22:36:02 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 #include "A.hpp"
 #include "B.hpp"
 #include "C.hpp"
-#include <typeinfo>
 
 Base *generate(void);
 void identify(Base *p);

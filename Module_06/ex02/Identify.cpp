@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 22:20:27 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/25 23:38:16 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/26 22:35:46 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,35 @@ Base *generate(void)
 
 void identify(Base *p)
 {
-    (void)p;
-    std::cout << typeid(*p).name() << std::endl;
+    if (dynamic_cast<A*>(p))
+        std::cout << "The type is A." << std::endl;
+    else if (dynamic_cast<B*>(p))
+        std::cout << "The type is B." << std::endl;
+    else if (dynamic_cast<C*>(p))
+        std::cout << "The type is C." << std::endl;
 }
 
 void identify(Base &p)
 {
-    (void)p;
+    try
+    {
+        A &ref = dynamic_cast<A&>(p);
+        (void)ref;
+        std::cout << "The type is A." << std::endl;
+    }
+    catch(const std::exception& e){}
+    try
+    {
+        B &ref = dynamic_cast<B&>(p);
+        (void)ref;
+        std::cout << "The type is B." << std::endl;
+    }
+    catch(const std::exception& e){};
+    try
+    {
+        C &ref = (dynamic_cast<C&>(p));
+        (void)ref;
+        std::cout << "The type is C." << std::endl;
+    }
+    catch(const std::exception& e){};
 }
