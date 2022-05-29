@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/27 21:46:40 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/27 22:21:47 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/05/29 14:31:37 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,18 @@
 
 #include <iostream>
 
-template <class Type>
-void swap(Type &a, Type &b)
+template <class T>
+void swap(T &a, T &b)
 {
-    Type tmp;
+    T tmp;
 
     tmp = a;
     a = b;
     b = tmp;
 }
 
-template <class Type>
-Type min(Type a, Type b)
+template <class T>
+T min(T a, T b)
 {
     if (a < b)
         return (a);
@@ -34,8 +34,8 @@ Type min(Type a, Type b)
         return (b);
 }
 
-template <class Type>
-Type max(Type a, Type b)
+template <class T>
+T max(T a, T b)
 {
     if (a > b)
         return (a);
