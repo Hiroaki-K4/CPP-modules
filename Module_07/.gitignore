@@ -1,4 +1,6 @@
 ex00/*.o
 ex01/*.o
+ex02/*.o
 ex00/templates
 ex01/iter
+ex02/templates
