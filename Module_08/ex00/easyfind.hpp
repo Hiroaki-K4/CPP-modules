@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/03 22:40:44 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/31 21:47:28 by hkubo            ###   ########.fr       */
+/*   Created: 2022/05/31 21:58:04 by hkubo             #+#    #+#             */
+/*   Updated: 2022/05/31 22:52:38 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#ifndef EASYFIND_HPP
+# define EASYFIND_HPP
 
-int main(int argc, char *argv[])
+#include <algorithm>
+
+template <class T>
+typename T::iterator easyfind(T container, int num)
 {
-
-	(void)argv;
-	if (argc == 1)
-	{
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-		return (0);
-	}
-	for (int i = 1; i < argc; i++)
-	{
-		std::string str = argv[i];
-		for (int j = 0; j < (int)str.length(); j++)
-		{
-			char c = std::toupper(str[i]);
-			std::cout << c;
-		}
-	}
-	std::cout << std::endl;
-	return (0);
+    typename T::iterator it;
+    it = find(container.begin(), container.end(), num);
+    if (it == container.end())
+        throw std::exception();
+    return (it);
 }
+
+#endif
