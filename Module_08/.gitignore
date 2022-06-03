@@ -1,4 +1,6 @@
 ex00/*.o
 ex01/*.o
+ex02/*.o
 ex00/easyfind
 ex01/ex01
+ex02/ex02
