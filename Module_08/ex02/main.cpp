@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 21:57:48 by hkubo             #+#    #+#             */
-/*   Updated: 2022/06/03 22:45:08 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/06/04 17:32:39 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ int main(void)
     mstack.push(5);
     mstack.push(737);
     mstack.push(0);
-    // MutantStack<int>::iterator it = mstack.begin();
+    MutantStack<int>::iterator it = mstack.begin();
+    std::cout << *it << std::endl;
     // MutantStack<int>::iterator ite = mstack.end();
     // ++it;
     // --it;
