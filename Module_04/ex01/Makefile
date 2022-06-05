@@ -2,6 +2,7 @@ NAME := brain
 
 SRC := $(wildcard *.cpp)
 OBJ := $(SRC:.cpp=.o)
+INCLUDE := -I.
 
 RM := rm -rf
 CC := clang++
@@ -9,8 +10,10 @@ FLAGS := -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
-$(NAME):
-	$(CC) $(FLAGS) -c $(SRC)
+%.o: %.cpp
+	$(CC) $(FLAGS) $(INCLUDE) -c $< -o $@
+
+$(NAME): $(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 clean:
