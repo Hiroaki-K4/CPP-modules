@@ -1,4 +1,4 @@
-NAME := claptrap
+NAME := ex02
 
 SRC := $(wildcard *.cpp)
 OBJ := $(SRC:.cpp=.o)

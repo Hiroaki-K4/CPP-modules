@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 22:40:54 by hkubo             #+#    #+#             */
-/*   Updated: 2022/03/06 23:12:01 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/06/05 17:27:53 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ void PhoneBook::addContact()
 	std::cin >> tmp;
 	contact[added_nums].setDarkestSecret(tmp);
 	added_nums++;
+	std::cout << "The contact has been added successfully." << std::endl;
 }
 
 std::string PhoneBook::editOutput(std::string word)

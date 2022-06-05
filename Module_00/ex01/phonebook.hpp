@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 23:11:32 by hkubo             #+#    #+#             */
-/*   Updated: 2022/03/07 21:45:32 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/06/05 17:28:42 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class PhoneBook
 {
     private:
         size_t added_nums;
-    public:
         Contact contact[8];
+    public:
         PhoneBook();
         void addContact();
         void showContact(int index);

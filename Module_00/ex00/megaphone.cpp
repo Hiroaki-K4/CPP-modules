@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 22:40:44 by hkubo             #+#    #+#             */
-/*   Updated: 2022/05/31 21:47:28 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/06/05 17:01:06 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 		std::string str = argv[i];
 		for (int j = 0; j < (int)str.length(); j++)
 		{
-			char c = std::toupper(str[i]);
+			char c = std::toupper(str[j]);
 			std::cout << c;
 		}
 	}
