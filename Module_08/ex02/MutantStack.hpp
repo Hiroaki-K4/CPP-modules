@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/03 22:09:51 by hkubo             #+#    #+#             */
-/*   Updated: 2022/06/04 17:32:06 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/06/05 18:35:39 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,9 @@ template <typename T> class MutantStack : public std::stack<T>
             return (*this);
         };
         ~MutantStack() {};
-        typedef typename std::stack<T>::container_type::iterator iterator;
+        typedef typename std::deque<T>::iterator iterator;
         iterator begin() {return this->c.begin();};
-        // MutantStack<T>::iterator begin();
-        // std::stack<T>::iterator end();
-        // std::stack<T>::iterator cbegin();
-        // std::stack<T>::iterator cend();
-        // std::stack<T>::iterator rbegin();
-        // std::stack<T>::iterator rend();
-        // std::stack<T>::iterator crbegin();
-        // std::stack<T>::iterator crend();
+        iterator end() {return this->c.end();};
 };
 
 #endif
