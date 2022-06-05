@@ -9,8 +9,10 @@ FLAGS := -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
-$(NAME):
-	$(CC) $(FLAGS) -c $(SRC)
+%.o: %.cpp
+	$(CC) $(FLAGS) -c $< -o $@
+
+$(NAME): $(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 clean:
