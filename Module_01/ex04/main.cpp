@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 22:27:50 by hkubo             #+#    #+#             */
-/*   Updated: 2022/04/23 14:24:41 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/06/09 20:54:23 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,10 @@ std::string ft_replace(std::string line, std::string s1, std::string s2)
 int main(int argc, char *argv[])
 {
     if (argc != 4)
+    {
         std::cout << "[Arguments error] Please run the program like (./sed filename s1 s2)." << std::endl; 
+        return (0);
+    }
     std::ifstream ifs(argv[1]);
     if (ifs.fail())
     {
