@@ -4,7 +4,7 @@ SRC := $(wildcard *.cpp)
 OBJ := $(SRC:.cpp=.o)
 
 RM := rm -rf
-CC := clang++
+CC := c++
 FLAGS := -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)

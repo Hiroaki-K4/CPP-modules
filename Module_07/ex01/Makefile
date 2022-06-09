@@ -5,7 +5,7 @@ OBJ := $(SRC:.cpp=.o)
 INCLUDE := -I.
 
 RM := rm -rf
-CC := clang++
+CC := c++
 FLAGS := -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
