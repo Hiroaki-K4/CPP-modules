@@ -27,4 +27,11 @@ re: fclean all
 debug: FLAGS += -fsanitize=address
 debug: re
 
-.PHONY: all clean fclean re
+test: re
+	./harlFilter DEBUG
+	./harlFilter INFO
+	./harlFilter WARNING
+	./harlFilter ERROR
+	./harlFilter hello
+
+.PHONY: all clean fclean re debug test
