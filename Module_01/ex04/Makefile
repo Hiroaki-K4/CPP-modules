@@ -26,4 +26,7 @@ re: fclean all
 debug: FLAGS += -fsanitize=address
 debug: re
 
-.PHONY: all clean fclean re
+test: re
+	./sed main.cpp main hello
+
+.PHONY: all clean fclean re debug test

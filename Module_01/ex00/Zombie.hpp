@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/23 22:27:50 by hkubo             #+#    #+#             */
-/*   Updated: 2022/04/25 22:14:36 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/06/10 23:31:13 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define ZOMBIE_HPP
 
 #include <iostream>
-#include <stdlib.h>
+#include <cstdlib>
 
 class Zombie
 {

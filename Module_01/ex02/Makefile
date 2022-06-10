@@ -26,4 +26,4 @@ re: fclean all
 debug: FLAGS += -fsanitize=address
 debug: re
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re debug
