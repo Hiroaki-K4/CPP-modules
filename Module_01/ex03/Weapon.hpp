@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 22:10:03 by hkubo             #+#    #+#             */
-/*   Updated: 2022/04/25 22:14:18 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/06/17 23:11:29 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Weapon
 
     public:
         Weapon(std::string weapon);
-        std::string &getType();
+        const std::string &getType();
         void setType(std::string weapon);
 };
 

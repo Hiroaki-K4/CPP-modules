@@ -6,7 +6,7 @@
 /*   By: hkubo <hkubo@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/21 22:09:26 by hkubo             #+#    #+#             */
-/*   Updated: 2022/04/23 11:11:01 by hkubo            ###   ########.fr       */
+/*   Updated: 2022/06/17 23:11:34 by hkubo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Weapon::Weapon(std::string weapon)
     type = weapon;
 }
 
-std::string &Weapon::getType()
+const std::string &Weapon::getType()
 {
     return (type);
 }
